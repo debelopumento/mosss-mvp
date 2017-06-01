@@ -1,15 +1,24 @@
 import React, { Component } from "react";
-import logo from "./images/logo.png";
 import "./App.css";
+import d3Img from "./images/tmpD3Still.png";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <img src={d3Img} className="d3Still" />
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="landingText">
+          <p>Hello!</p>
+          <p>Let's design your home.</p>
+          <p>Please upload a photo of a room</p>
+
+        </div>
+        <div className="buttonContainer">
+          <button className="buttonGetStarted">Get Started</button>
+
+        </div>
+
       </div>
     );
   }
