@@ -10,7 +10,10 @@ import livingRoomImg from "./images/Living-Room-Uploaded.svg";
 class UploadPhotoPage extends Component {
   state = {
     imageUploaded: false,
-    showPoppup: false
+    showPoppup: false,
+    zipCode: "",
+    zipCodeValidated: false,
+    readyForSubmission: false
   };
 
   showPoppup = () => {
@@ -20,6 +23,15 @@ class UploadPhotoPage extends Component {
   imageUploaded = () => {
     this.setState({ imageUploaded: true });
     this.setState({ showPoppup: false });
+  };
+
+  zipCodeOnChange = event => {
+    const zipCode = event.target.value;
+    const isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipCode);
+    if (isValidZip) {
+      this.setState({ zipCodeValidated: true });
+      this.setState({ zipCode });
+    }
   };
 
   render() {
@@ -60,6 +72,24 @@ class UploadPhotoPage extends Component {
           onClick={this.showPoppup}
         />;
 
+    const zipCodeButton = this.state.zipCodeValidated
+      ? <input
+          className="zipCodeValidated"
+          placeholder={this.state.zipCode}
+          type="text"
+        />
+      : <input
+          className="zipCode"
+          placeholder="Zip Code"
+          type="text"
+          onChange={this.zipCodeOnChange}
+        />;
+
+    const bottomContent = this.state.imageUploaded &&
+      this.state.zipCodeValidated
+      ? <input className="selectPhotoBtn" type="submit" value="Submit" />
+      : <div />;
+
     return (
       <div className="main">
         {popup}
@@ -74,10 +104,11 @@ class UploadPhotoPage extends Component {
             add your Zip Code
           </p>
           {uploadButton}
-          <input className="zipCode" value="Zip Code" type="text" />
+          {zipCodeButton}
           <div />
         </div>
         {bottomText}
+        {bottomContent}
       </div>
     );
   }
