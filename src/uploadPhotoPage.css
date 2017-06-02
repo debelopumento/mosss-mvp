@@ -13,7 +13,7 @@
 	vertical-align: middle;
 }
 
-p {
+.uploadPhotoPageText {
 	margin-left: 8px;
 	font-size: 30px;
 	text-align: left;
@@ -36,10 +36,16 @@ input {
 
 .upload {
 	height: 44px;
-
 }
 
 .zipCode {
 	height: 36px;
 
+}
+
+h3 {
+  	padding-top: 50px;
+	color: #ccc;
+	font-weight: lighter;
+    font-style: italic;
 }

@@ -17,17 +17,24 @@ class UploadPhotoPage extends Component {
           {image}
         </div>
         <div className="container">
-          <p>
+          <p className="uploadPhotoPageText">
             Upload a Photo and
           </p>
-          <p>
+          <p className="uploadPhotoPageText">
             add your Zip Code
           </p>
-          <input className="upload" type="submit" text="Upload Photo" />
+          <input
+            onChange={e => this._handleImageChange(e)}
+            className="upload"
+            type="file"
+            text="Upload Photo"
+            name="file"
+            id="file"
+          />
           <input className="zipCode" value="Zip Code" type="text" />
           <div />
         </div>
-
+        <h3>No Photo? Take our Taste Test!</h3>
       </div>
     );
   }
