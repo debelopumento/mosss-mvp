@@ -49,3 +49,47 @@ h3 {
 	font-weight: lighter;
     font-style: italic;
 }
+
+.popupBackground {
+	background-color: rgba(0, 0, 0, 0.4);
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.popupwrap {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+
+	text-align: center;
+	top: 180px;
+}
+
+.popupContainer {
+	height: 360px;
+	width: 480px;	
+	display: table;
+	margin: auto;
+}
+
+.popup {
+	background-color: white;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.popupText {
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+.selectPhotoBtn {
+	background-color: black;
+	color: white;
+	border:  0px;
+	height: 40px;
+	border-radius: 0;
+}

@@ -3,6 +3,9 @@ import "./uploadPhotoPage.css";
 import defaultImag from "./images/photoUploadDefault.png";
 import "./uploadPhotoPage.css";
 
+//we don't have a backend for this photo upload function yet
+//so I put a fake button there for now.
+
 class UploadPhotoPage extends Component {
   state = {
     img: "default"
@@ -13,6 +16,21 @@ class UploadPhotoPage extends Component {
       : <p>la</p>;
     return (
       <div className="main">
+        <div>
+          <div className="popupwrap">
+            <div className="popupContainer">
+              <div className="popup">
+                <p className="popupText">Upload a photo from computer</p>
+                <input
+                  className="selectPhotoBtn"
+                  type="submit"
+                  value="Select Photo"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="popupBackground" />
+        </div>
         <div className="container">
           {image}
         </div>
@@ -24,12 +42,10 @@ class UploadPhotoPage extends Component {
             add your Zip Code
           </p>
           <input
-            onChange={e => this._handleImageChange(e)}
             className="upload"
-            type="file"
-            text="Upload Photo"
-            name="file"
-            id="file"
+            //type="file"
+            value="Upload Photo"
+            type="submit"
           />
           <input className="zipCode" value="Zip Code" type="text" />
           <div />
