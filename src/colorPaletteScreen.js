@@ -1,9 +1,24 @@
 import React, { Component } from "react";
-import livingRoomImg from "./images/Living-Room-Uploaded.png";
+import livingRoomImg from "./images/living-room-with-dots.png";
 import "./colorPaletteScreen.css";
+import { Redirect } from "react-router";
 
 class ColorPaletteScreen extends Component {
+	state = {
+		redirect: false
+	};
+
+	handleSubmit = () => {
+		console.log(this.state);
+		this.setState({ redirect: true });
+
+		console.log(this.state);
+	};
+
 	render() {
+		if (this.state.redirect) {
+			return <Redirect to="/materials" />;
+		}
 		return (
 			<div className="App">
 				<p
@@ -138,7 +153,7 @@ class ColorPaletteScreen extends Component {
 						className="selectPhotoBtn"
 						type="submit"
 						value="Submit"
-						onClick={this.submit}
+						onClick={this.handleSubmit}
 					/>
 				</div>
 			</div>

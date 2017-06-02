@@ -10,6 +10,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
 import AnalyzingScreen from "./analyzingScreen";
 import ColorPaletteScreen from "./colorPaletteScreen";
+import MaterialScreen from "./materialScreen";
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -28,6 +29,7 @@ ReactDOM.render(
 					path="/colorPalette"
 					component={ColorPaletteScreen}
 				/>
+				<Route exact path="/materials" component={MaterialScreen} />
 			</div>
 		</Router>
 	</Provider>,
