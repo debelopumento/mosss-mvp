@@ -9,6 +9,7 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
 import AnalyzingScreen from "./analyzingScreen";
+import ColorPaletteScreen from "./colorPaletteScreen";
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -22,6 +23,11 @@ ReactDOM.render(
 					component={UploadPhotoPage}
 				/>
 				<Route exact path="/analyzing" component={AnalyzingScreen} />
+				<Route
+					exact
+					path="/colorPalette"
+					component={ColorPaletteScreen}
+				/>
 			</div>
 		</Router>
 	</Provider>,

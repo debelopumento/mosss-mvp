@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import livingRoomImg from "./images/Living-Room-Uploaded.png";
 import "./analyzingScreen.css";
+import { Redirect } from "react-router";
+
 class AnalyzingScreen extends Component {
+	state = {
+		redirect: false
+	};
+
+	componentDidMount() {
+		setTimeout(() => {
+			this.setState({ redirect: true });
+		}, 3000);
+	}
+
 	render() {
+		if (this.state.redirect) {
+			return <Redirect to="/colorPalette" />;
+		}
 		return (
 			<div
 				style={{

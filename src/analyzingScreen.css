@@ -18,28 +18,28 @@
 
 .up {
 	transform: translate(0, -23px);
-  	animation: changeColor infinite 4s ease-in-out;
+  	animation: changeColor infinite 2s ease-in-out;
 }
 
 .down {
 	transform: translate(0, 23px);
-  	animation: changeColor infinite 4s ease-in-out;
-    animation-delay: 2s;
+  	animation: changeColor infinite 2s ease-in-out;
+    animation-delay: 1s;
 }
 
 .left {
 	transform: translate(-23px, 0);
-  	animation: changeColor infinite 4s ease-in-out;
-    animation-delay: 1s;
+  	animation: changeColor infinite 2s ease-in-out;
+    animation-delay: 0.5s;
 }
 
 .right {
 	transform: translate(23px, 0);
-  	animation: changeColor infinite 4s ease-in-out;
-    animation-delay: 3s;
+  	animation: changeColor infinite 2s ease-in-out;
+    animation-delay: 1.5s;
 }
 
 @keyframes changeColor {
-	from { filter:brightness(100%) }
-	to { filter:brightness(120%) }
+	from { filter:brightness(90%) }
+	to { filter:brightness(140%) }
 }
