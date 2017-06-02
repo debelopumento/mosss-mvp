@@ -38,6 +38,12 @@ input {
 	height: 44px;
 }
 
+.uploaded {
+	height: 44px;
+	background-color: #bdc3c7;
+	color: white;
+}
+
 .zipCode {
 	height: 36px;
 

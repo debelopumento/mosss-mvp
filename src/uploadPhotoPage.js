@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import "./uploadPhotoPage.css";
 import defaultImag from "./images/photoUploadDefault.png";
 import "./uploadPhotoPage.css";
+import livingRoomImg from "./images/Living-Room-Uploaded.svg";
 
 //we don't have a backend for this photo upload function yet
 //so I put a fake button there for now.
 
 class UploadPhotoPage extends Component {
   state = {
-    img: "default",
+    imageUploaded: false,
     showPoppup: false
   };
 
@@ -16,10 +17,16 @@ class UploadPhotoPage extends Component {
     this.setState({ showPoppup: true });
   };
 
+  imageUploaded = () => {
+    this.setState({ imageUploaded: true });
+    this.setState({ showPoppup: false });
+  };
+
   render() {
-    const image = this.state.img === "default"
-      ? <img className="img" src={defaultImag} />
-      : <p>la</p>;
+    const image = this.state.imageUploaded
+      ? <img className="img" src={livingRoomImg} />
+      : <img className="img" src={defaultImag} />;
+
     const popup = this.state.showPoppup
       ? <div>
           <div className="popupwrap">
@@ -30,6 +37,7 @@ class UploadPhotoPage extends Component {
                   className="selectPhotoBtn"
                   type="submit"
                   value="Select Photo"
+                  onClick={this.imageUploaded}
                 />
               </div>
             </div>
@@ -37,6 +45,21 @@ class UploadPhotoPage extends Component {
           <div className="popupBackground" />
         </div>
       : <div />;
+
+    const bottomText = this.state.imageUploaded
+      ? <div />
+      : <h3>No Photo? Take our Taste Test!</h3>;
+
+    const uploadButton = this.state.imageUploaded
+      ? <input className="uploaded" value="Uploaded" type="submit" />
+      : <input
+          className="upload"
+          //type="file"
+          value="Upload Photo"
+          type="submit"
+          onClick={this.showPoppup}
+        />;
+
     return (
       <div className="main">
         {popup}
@@ -50,17 +73,11 @@ class UploadPhotoPage extends Component {
           <p className="uploadPhotoPageText">
             add your Zip Code
           </p>
-          <input
-            className="upload"
-            //type="file"
-            value="Upload Photo"
-            type="submit"
-            onClick={this.showPoppup}
-          />
+          {uploadButton}
           <input className="zipCode" value="Zip Code" type="text" />
           <div />
         </div>
-        <h3>No Photo? Take our Taste Test!</h3>
+        {bottomText}
       </div>
     );
   }
