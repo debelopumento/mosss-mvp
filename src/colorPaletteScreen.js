@@ -9,10 +9,7 @@ class ColorPaletteScreen extends Component {
 	};
 
 	handleSubmit = () => {
-		console.log(this.state);
 		this.setState({ redirect: true });
-
-		console.log(this.state);
 	};
 
 	render() {

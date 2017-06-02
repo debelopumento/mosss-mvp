@@ -11,6 +11,7 @@ import "./index.css";
 import AnalyzingScreen from "./analyzingScreen";
 import ColorPaletteScreen from "./colorPaletteScreen";
 import MaterialScreen from "./materialScreen";
+import RemoveItemsScreen from "./removeItemsScreen";
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -30,6 +31,11 @@ ReactDOM.render(
 					component={ColorPaletteScreen}
 				/>
 				<Route exact path="/materials" component={MaterialScreen} />
+				<Route
+					exact
+					path="/removeItems"
+					component={RemoveItemsScreen}
+				/>
 			</div>
 		</Router>
 	</Provider>,

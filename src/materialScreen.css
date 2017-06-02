@@ -1,0 +1,34 @@
+.materialDisplayRowContainer {
+	display: flex;
+	width: 220px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.materialDisplay {
+	height: 70px;
+	width: 70px;
+	margin-left: 15px;
+}
+
+.tweed {
+	background-image: url('./images/Tweed.png');
+}
+
+.marble {
+	background-image: url('./images/Marble.png')
+}
+
+.wood {
+	background-image: url('./images/Wood.png')
+}
+
+.metal {
+	background-image: url('./images/Metal.png')
+}
+
+.materialTitle {
+	margin-top: 28px;
+	font-weight: lighter;
+	font-size: 13px;
+}
