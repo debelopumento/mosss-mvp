@@ -20,7 +20,7 @@ class MaterialScreen extends Component {
 			<div className="App">
 				<p
 					style={{
-						fontSize: 20
+						fontSize: 24
 					}}
 				>
 					We've identified these <span
@@ -32,7 +32,7 @@ class MaterialScreen extends Component {
 					</span> in your palette
 				</p>
 				<img className="imgAnalyzed" src={livingRoomImg} />
-				<p>
+				<p style={{ fontSize: 20 }}>
 					Select what you would like to keep
 				</p>
 				<div style={{ textAlign: "center" }}>
@@ -46,7 +46,7 @@ class MaterialScreen extends Component {
 								className="fa fa-plus-square-o fa-lg"
 								aria-hidden="true"
 								style={{
-									marginTop: 30
+									marginTop: 45
 								}}
 							/>
 							<div className="materialDisplay tweed">
@@ -65,7 +65,7 @@ class MaterialScreen extends Component {
 								className="fa fa-plus-square-o fa-lg"
 								aria-hidden="true"
 								style={{
-									marginTop: 30
+									marginTop: 45
 								}}
 							/>
 							<div className="materialDisplay marble">
@@ -86,7 +86,7 @@ class MaterialScreen extends Component {
 							className="fa fa-plus-square-o fa-lg"
 							aria-hidden="true"
 							style={{
-								marginTop: 30
+								marginTop: 45
 							}}
 						/>
 						<div className="materialDisplay wood">
@@ -105,7 +105,7 @@ class MaterialScreen extends Component {
 							className="fa fa-plus-square-o fa-lg"
 							aria-hidden="true"
 							style={{
-								marginTop: 30
+								marginTop: 45
 							}}
 						/>
 						<div className="materialDisplay metal">

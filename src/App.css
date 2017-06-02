@@ -1,30 +1,30 @@
 .App {
-  padding-top: 40px;
+  padding-top: 60px;
   text-align: center;
   position: relative;
 }
 
 .landingText {
   position: absolute;
-  top: 190px;
+  top: 270px;
   left: 0;
   width: 100%;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 50%;
   color: #465766;
 }
 
 .App-logo {
-  height: 40px;
+  height: 60px;
 }
 
 .d3Still {
-  height: 530px;
+  height: 750px;
 }
 
 .App-header {
   text-align: center;
-  height: 35px;
+  height: 55px;
   padding: 10px;
   margin-left: 40px;
   margin-right: 40px;
@@ -33,16 +33,16 @@
 
 .buttonContainer {
   position: absolute;
-  top: 350px;
+  top: 500px;
   left: 0;
   width: 100%;
 }
 
 .buttonGetStarted {
-  width: 130px;
-  height: 40px;
+  width: 180px;
+  height: 60px;
   background-color: #1b2228;
   color: white;
   border: 0;
-  font-size: 13px;
+  font-size: 20px;
 }

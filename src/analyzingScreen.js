@@ -34,7 +34,7 @@ class AnalyzingScreen extends Component {
 				</div>
 				<div
 					style={{
-						width: 440,
+						width: 550,
 						margin: "auto"
 					}}
 				>

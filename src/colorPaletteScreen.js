@@ -20,7 +20,8 @@ class ColorPaletteScreen extends Component {
 			<div className="App">
 				<p
 					style={{
-						fontSize: 20
+						fontSize: 24,
+						color: "#404041"
 					}}
 				>
 					We've identified these <span
@@ -32,14 +33,14 @@ class ColorPaletteScreen extends Component {
 					</span> in your palette
 				</p>
 				<img className="imgAnalyzed" src={livingRoomImg} />
-				<p style={{ marginTop: 40 }}>
+				<p style={{ marginTop: 48, fontSize: 23, color: "#404041" }}>
 					Select what you would like to keep
 				</p>
 				<div style={{ textAlign: "center" }}>
 					<div
 						style={{
 							textAlign: "left",
-							width: 200,
+							width: 240,
 							margin: "auto"
 						}}
 					>
@@ -52,10 +53,10 @@ class ColorPaletteScreen extends Component {
 								style={{
 									backgroundColor: "#413e3a",
 									border: 0,
-									width: 43,
-									height: 43,
-									borderRadius: 25,
-									marginLeft: 20
+									width: 65,
+									height: 65,
+									borderRadius: 50,
+									marginLeft: 28
 								}}
 							/>
 							<span
@@ -77,10 +78,10 @@ class ColorPaletteScreen extends Component {
 								style={{
 									backgroundColor: "#dbdce0",
 									border: 0,
-									width: 43,
-									height: 43,
-									borderRadius: 25,
-									marginLeft: 20
+									width: 65,
+									height: 65,
+									borderRadius: 50,
+									marginLeft: 28
 								}}
 							/>
 							<span
@@ -102,10 +103,10 @@ class ColorPaletteScreen extends Component {
 								style={{
 									backgroundColor: "#333640",
 									border: 0,
-									width: 43,
-									height: 43,
-									borderRadius: 25,
-									marginLeft: 20
+									width: 65,
+									height: 65,
+									borderRadius: 50,
+									marginLeft: 28
 								}}
 							/>
 							<span
@@ -127,10 +128,10 @@ class ColorPaletteScreen extends Component {
 								style={{
 									backgroundColor: "#d7d5cf",
 									border: 0,
-									width: 43,
-									height: 43,
-									borderRadius: 25,
-									marginLeft: 20
+									width: 65,
+									height: 65,
+									borderRadius: 50,
+									marginLeft: 28
 								}}
 							/>
 							<span

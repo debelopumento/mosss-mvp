@@ -1,13 +1,13 @@
 .materialDisplayRowContainer {
 	display: flex;
-	width: 220px;
+	width: 260px;
 	margin: auto;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .materialDisplay {
-	height: 70px;
-	width: 70px;
+	height: 100px;
+	width: 100px;
 	margin-left: 15px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .materialTitle {
-	margin-top: 28px;
-	font-weight: lighter;
-	font-size: 13px;
+	margin-top: 42px;
+	font-size: 20px;
+	color: #404041;
 }

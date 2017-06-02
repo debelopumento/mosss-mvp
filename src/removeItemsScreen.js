@@ -49,9 +49,9 @@ class RemoveItemsScreen extends Component {
 						<input
 							id={index}
 							style={{
-								width: 25,
-								height: 40,
-								border: "3px solid #404041",
+								width: 40,
+								height: 50,
+								border: "4px solid #404041",
 								display: "tableCell",
 								margin: 0,
 								color: "#404041"
@@ -63,17 +63,18 @@ class RemoveItemsScreen extends Component {
 					</span>
 					<span
 						style={{
-							borderRight: "3px solid #404041",
-							borderTop: "3px solid #404041",
-							borderBottom: "3px solid #404041",
+							borderRight: "4px solid #404041",
+							borderTop: "4px solid #404041",
+							borderBottom: "4px solid #404041",
 							borderRadius: 3,
 							marginLeft: 0,
-							height: 15,
-							paddingTop: 6,
-							paddingBottom: 9,
-							paddingLeft: 10,
-							paddingRight: 10,
-							display: "tableCell"
+							height: 18,
+							paddingTop: 8,
+							paddingBottom: 11,
+							paddingLeft: 13,
+							paddingRight: 13,
+							display: "tableCell",
+							fontSize: 20
 						}}
 					>
 						{item}
@@ -84,14 +85,14 @@ class RemoveItemsScreen extends Component {
 		return (
 			<div
 				style={{
-					paddingTop: 100,
+					paddingTop: 130,
 					color: "#404041",
 					textAlign: "center"
 				}}
 			>
 				<div
 					style={{
-						width: 750,
+						width: 1000,
 						margin: "auto",
 						display: "flex"
 					}}
@@ -99,7 +100,7 @@ class RemoveItemsScreen extends Component {
 					<div>
 						<img
 							style={{
-								width: 330
+								width: 500
 							}}
 							src={livingRoomImg}
 						/>
@@ -107,15 +108,17 @@ class RemoveItemsScreen extends Component {
 					<div
 						style={{
 							position: "relative",
-							marginLeft: 20
+							marginLeft: 30
 						}}
 					>
 						<p
 							style={{
-								fontSize: 30,
+								fontSize: 42,
+								color: "#404041",
+								textAlign: "left",
 								lineHeight: "150%",
-								marginTop: 10,
-								marginBottom: 0
+								marginTop: 20,
+								marginBottom: 10
 							}}
 						>
 							We're pretty sure we see a
@@ -144,10 +147,11 @@ class RemoveItemsScreen extends Component {
 						</p>
 						<p
 							style={{
-								fontSize: 18,
+								fontSize: 23,
 								fontStyle: "italic",
 								marginTop: 20,
-								fontWeight: "lighter"
+								fontWeight: "lighter",
+								textAlign: "left"
 							}}
 						>
 							<span style={{ fontWeight: "bold" }}>

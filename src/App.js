@@ -17,20 +17,16 @@ class App extends Component {
     return (
       <div className="App">
         <img src={d3Img} className="d3Still" />
-
         <div className="landingText">
           <p>Hello!</p>
           <p>Let's design your home.</p>
           <p>Please upload a photo of a room</p>
-
         </div>
         <div className="buttonContainer">
           <button className="buttonGetStarted" onClick={this.getStarted}>
             Get Started
           </button>
-
         </div>
-
       </div>
     );
   }

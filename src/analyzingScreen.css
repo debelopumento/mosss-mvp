@@ -1,10 +1,10 @@
 .tintedImg {
-	height: 200px;
+	height: 250px;
 	filter:brightness(50%); 
 }
 
 .loader {
-	transform: translate(-8px, -120px);
+	transform: translate(-8px, -140px);
 }
 
 .loaderDot {
