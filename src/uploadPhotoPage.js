@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./uploadPhotoPage.css";
 import defaultImag from "./images/photoUploadDefault.png";
 import "./uploadPhotoPage.css";
-import livingRoomImg from "./images/Living-Room-Uploaded.svg";
+import livingRoomImg from "./images/Living-Room-Uploaded.png";
+import { Redirect } from "react-router";
 
 //we don't have a backend for this photo upload function yet
 //so I put a fake button there for now.
@@ -13,7 +14,8 @@ class UploadPhotoPage extends Component {
     showPoppup: false,
     zipCode: "",
     zipCodeValidated: false,
-    readyForSubmission: false
+    readyForSubmission: false,
+    redirect: false
   };
 
   showPoppup = () => {
@@ -32,6 +34,10 @@ class UploadPhotoPage extends Component {
       this.setState({ zipCodeValidated: true });
       this.setState({ zipCode });
     }
+  };
+
+  submit = () => {
+    this.setState({ redirect: true });
   };
 
   render() {
@@ -87,9 +93,17 @@ class UploadPhotoPage extends Component {
 
     const bottomContent = this.state.imageUploaded &&
       this.state.zipCodeValidated
-      ? <input className="selectPhotoBtn" type="submit" value="Submit" />
+      ? <input
+          className="selectPhotoBtn"
+          type="submit"
+          value="Submit"
+          onClick={this.submit}
+        />
       : <div />;
 
+    if (this.state.redirect) {
+      return <Redirect to="/analyzing" />;
+    }
     return (
       <div className="main">
         {popup}

@@ -8,6 +8,7 @@ import UploadPhotoPage from "./uploadPhotoPage";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
+import AnalyzingScreen from "./analyzingScreen";
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -20,6 +21,7 @@ ReactDOM.render(
 					path="/uploadPhotoPage"
 					component={UploadPhotoPage}
 				/>
+				<Route exact path="/analyzing" component={AnalyzingScreen} />
 			</div>
 		</Router>
 	</Provider>,

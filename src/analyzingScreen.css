@@ -1,0 +1,45 @@
+.tintedImg {
+	height: 200px;
+	filter:brightness(50%); 
+}
+
+.loader {
+	transform: translate(-8px, -120px);
+}
+
+.loaderDot {
+	width: 10px;
+	height: 10px;
+	border: 0;
+	border-radius: 100%;
+	position: absolute;
+	background-color: #d4d912
+}
+
+.up {
+	transform: translate(0, -23px);
+  	animation: changeColor infinite 4s ease-in-out;
+}
+
+.down {
+	transform: translate(0, 23px);
+  	animation: changeColor infinite 4s ease-in-out;
+    animation-delay: 2s;
+}
+
+.left {
+	transform: translate(-23px, 0);
+  	animation: changeColor infinite 4s ease-in-out;
+    animation-delay: 1s;
+}
+
+.right {
+	transform: translate(23px, 0);
+  	animation: changeColor infinite 4s ease-in-out;
+    animation-delay: 3s;
+}
+
+@keyframes changeColor {
+	from { filter:brightness(100%) }
+	to { filter:brightness(120%) }
+}
