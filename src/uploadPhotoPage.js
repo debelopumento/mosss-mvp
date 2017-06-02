@@ -8,15 +8,20 @@ import "./uploadPhotoPage.css";
 
 class UploadPhotoPage extends Component {
   state = {
-    img: "default"
+    img: "default",
+    showPoppup: false
   };
+
+  showPoppup = () => {
+    this.setState({ showPoppup: true });
+  };
+
   render() {
     const image = this.state.img === "default"
       ? <img className="img" src={defaultImag} />
       : <p>la</p>;
-    return (
-      <div className="main">
-        <div>
+    const popup = this.state.showPoppup
+      ? <div>
           <div className="popupwrap">
             <div className="popupContainer">
               <div className="popup">
@@ -31,6 +36,10 @@ class UploadPhotoPage extends Component {
           </div>
           <div className="popupBackground" />
         </div>
+      : <div />;
+    return (
+      <div className="main">
+        {popup}
         <div className="container">
           {image}
         </div>
@@ -46,6 +55,7 @@ class UploadPhotoPage extends Component {
             //type="file"
             value="Upload Photo"
             type="submit"
+            onClick={this.showPoppup}
           />
           <input className="zipCode" value="Zip Code" type="text" />
           <div />
